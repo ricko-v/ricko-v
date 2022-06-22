@@ -1,5 +1,5 @@
 ## Hey 👋, This is Ricko Veriyanto
-[![Gmail Badge](https://img.shields.io/badge/-veriyantoricko302@gmail.com-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:veriyantoricko302@gmail.com)](mailto:veriyantoricko302@gmail.com) [![Github Badge](https://img.shields.io/badge/-Ricko-grey?style=flat&logo=github&logoColor=white&link=https://github.com/ricko-v/)](https://www.github.com/ricko-v/) <p align='left'>Hi, I'm Ricko, My Full Name Is Ricko Veriyanto, Or you Can call me as Ricko, I'm an 18 y.o Coder. and I'm still a student at SMKN 5 Surakarta, Jawa Tengah</p>
+[![Gmail Badge](https://img.shields.io/badge/-veriyantoricko302@gmail.com-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:veriyantoricko302@gmail.com)](mailto:veriyantoricko302@gmail.com) [![Github Badge](https://img.shields.io/badge/-Ricko-grey?style=flat&logo=github&logoColor=white&link=https://github.com/ricko-v/)](https://www.github.com/ricko-v/) <p align='left'>Hi! My Full Name Is Ricko Veriyanto, Or you can call me as Ricko. I'm an 18 y.o Coder and I'm live in Karanganyar, Jawa Tengah</p>
 ## Some of my Github Stats
 <p align=left> <img src=https://komarev.com/ghpvc/?username=ricko-v alt=ricko-v /> </p>
 

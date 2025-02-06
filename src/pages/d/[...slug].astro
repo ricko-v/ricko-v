@@ -1,0 +1,79 @@
+---
+import { getCollection, render } from "astro:content";
+import "../../styles/global.css";
+import Header from "../../components/header.astro";
+import { Icon } from "astro-icon/components";
+
+export async function getStaticPaths() {
+	const posts = await getCollection("documentation");
+	return posts.map((post: any) => ({
+		params: { slug: post.slug },
+		props: { post },
+	}));
+}
+
+const { post }: any = Astro.props;
+const { Content } = await render(post);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>@rickoveriyanto - {post.data.title}</title>
+		<script is:inline>
+			if (
+				localStorage.theme === "dark" ||
+				(!("theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark");
+			} else {
+				document.documentElement.classList.remove("dark");
+			}
+		</script>
+	</head>
+	<body
+		class="transition-colors duration-300 bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100"
+	>
+		<div class="container mx-auto max-w-4xl relative min-h-screen pb-26">
+			<header class="p-3">
+				<Header noNav />
+			</header>
+
+			<div
+				class="flex items-center gap-2 px-3 text-neutral-500 dark:text-neutral-600"
+			>
+				<Icon name="mdi:home-outline" />
+				<a href="/">Home</a>
+				<span>/</span>
+				<span>d</span>
+				<span>/</span>
+				<span>{post.data.title}</span>
+			</div>
+
+			<main class="mt-10 px-3">
+				<div
+					class="prose dark:prose-invert
+prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-p:text-justify prose-img:rounded-xl
+ max-w-full"
+				>
+					<h1>{post.data.title}</h1>
+					<Content />
+				</div>
+			</main>
+		</div>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

@@ -1,0 +1,35 @@
+---
+import ThemeToggle from "./theme-toggle.astro";
+import menu from "../config/menu";
+import { Icon } from "astro-icon/components";
+const pathname = Astro.url.pathname;
+
+const { noNav } = Astro.props;
+---
+
+<div class="flex justify-between items-center">
+	<h1 class="font-semibold text-xl">@rickoveriyanto</h1>
+
+	<div class="gap-5 hidden md:flex">
+		{
+			!noNav &&
+				menu.map((x) => (
+					<a
+						href={`#${x.path}`}
+						class={
+							pathname == x.path
+								? `text-black dark:text-white flex items-center gap-1 group`
+								: `text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white flex items-center gap-1 group`
+						}
+					>
+						<Icon name={x.icon} />
+						<span class="">{x.title}</span>
+					</a>
+				))
+		}
+		<ThemeToggle />
+	</div>
+	<div class="gap-5 md:hidden flex">
+		<ThemeToggle />
+	</div>
+</div>

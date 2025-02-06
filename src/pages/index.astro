@@ -1,11 +1,121 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+import menu from "../config/menu";
+import Default from "../layouts/default.astro";
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const listDocs = await getCollection("documentation");
+const listProjects = await getCollection("projects");
+
+console.log(listProjects);
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Default>
+	<div class="inline md:flex gap-5 items-center text-center md:text-start">
+		<div class="flex justify-center">
+			<Image
+				loading={"eager"}
+				src="https://avatars.githubusercontent.com/u/57689814?v=4"
+				width="100"
+				height="100"
+				class="bg-neutral-400 dark:bg-neutral-800 rounded-full mb-3 md:mb-0"
+				alt="aku"
+			/>
+		</div>
+
+		<div>
+			<b>Ricko Veriyanto</b>
+			<p class="text-neutral-500 mb-3 dark:text-neutral-400 italic">
+				Let's learn a code
+			</p>
+
+			<div class="flex gap-x-3 flex-wrap justify-center">
+				<a href="/" class="flex gap-1 items-center">
+					<Icon name={"mdi:email"} />
+					<small>veriyantoricko302@gmail.com</small>
+				</a>
+				<a href="/" class="flex gap-1 items-center">
+					<Icon name={"mdi:instagram"} />
+					<small>rickoveriyanto</small>
+				</a>
+				<a href="/" class="flex gap-1 items-center">
+					<Icon name={"mdi:github"} />
+					<small>ricko-v</small>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="mt-10 text-neutral-700 dark:text-neutral-400">
+		<p>
+			Hai 👋
+			<br />
+			Saya Ricko Veriyanto, berusia 21 tahun dan tinggal di Colomadu, Karanganyar.
+			Saya memiliki minat besar dalam dunia teknologi dan telah bekerja selama lebih
+			dari dua tahun sebagai Frontend Developer di PT Tribintang Emas Mulia.
+			<br /><br />
+			Meskipun saat ini fokus saya adalah pengembangan frontend, saya tetap senang
+			mengeksplorasi berbagai hal di bidang teknologi. Dari ketertarikan tersebut,
+			saya terinspirasi untuk membuat sebuah website yang mendokumentasikan hasil
+			belajar dan proyek-proyek saya.
+		</p>
+	</div>
+
+	<div class="mt-10">
+		<h2
+			id="documentation"
+			class="font-semibold text-lg flex items-center gap-2"
+		>
+			<Icon name={menu.filter((x) => x.title == "Documentation")[0].icon} />
+			Documentation
+		</h2>
+		<div class="mt-3 grid-cols-1 md:grid-cols-2 grid gap-x-5">
+			{
+				listDocs.map((x: any) => (
+					<div class="mb-5 bg-neutral-100 dark:bg-neutral-800 rounded p-3">
+						<a
+							href={`/d/${x.slug}`}
+							class="flex items-center justify-between flex-wrap  text-neutral-700  dark:text-neutral-400"
+						>
+							<h1 class="font-semibold text-neutral-700  dark:text-neutral-400 flex flex-wrap gap-x-2 items-center">
+								<Icon
+									name={menu.filter((x) => x.title == "Documentation")[0].icon}
+								/>
+								{x.data.title}
+							</h1>
+							<small>{x.data.create_date}</small>
+						</a>
+					</div>
+				))
+			}
+		</div>
+	</div>
+
+	<div class="mt-10">
+		<h2 id="projects" class="font-semibold text-lg flex items-center gap-2">
+			<Icon name={menu.filter((x) => x.title == "Projects")[0].icon} />
+			Projects
+		</h2>
+
+		<div class="columns-1 md:columns-2 mx-auto space-y-4 mt-5">
+			{
+				listProjects.map((x: any) => (
+					<div class="mb-5">
+						<a href="/" class="relative group rounded">
+							<Image src={x.data.cover} alt={x.data.title} class={"rounded"} />
+							<div
+								style="background: rgba(0,0,0,0.7)"
+								class="rounded top-0 text-center opacity-0 p-3 group-hover:opacity-100 transition-opacity absolute w-full h-full flex items-center justify-center"
+							>
+								<b>
+									<small>{x.data.description}</small>
+								</b>
+							</div>
+						</a>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</Default>

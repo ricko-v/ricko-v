@@ -3,9 +3,10 @@ import { getCollection, render } from "astro:content";
 import "../../styles/global.css";
 import Header from "../../components/header.astro";
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
-	const posts = await getCollection("documentation");
+	const posts = await getCollection("projects");
 	return posts.map((post: any) => ({
 		params: { slug: post.slug },
 		props: { post },
@@ -51,7 +52,7 @@ const { Content } = await render(post);
 				<Icon name="mdi:home-outline" />
 				<a href="/">Home</a>
 				<span>/</span>
-				<span>d</span>
+				<span>p</span>
 				<span>/</span>
 				<span>{post.data.title}</span>
 			</div>
@@ -59,10 +60,15 @@ const { Content } = await render(post);
 			<main class="mt-10 px-3">
 				<div
 					class="prose dark:prose-invert
- prose-p:text-justify prose-img:rounded-xl
+prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-p:text-justify prose-img:rounded-xl
  max-w-full"
 				>
 					<h1>{post.data.title}</h1>
+					<Image
+						src={post.data.cover}
+						alt={post.data.title}
+						class={"rounded mb-5"}
+					/>
 					<Content />
 				</div>
 			</main>

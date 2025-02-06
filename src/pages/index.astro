@@ -29,15 +29,21 @@ const listProjects = await getCollection("projects");
 			</p>
 
 			<div class="flex gap-x-3 flex-wrap justify-center">
-				<a href="/" class="flex gap-1 items-center">
+				<a
+					href="mailto:veriyantoricko302@gmail.com"
+					class="flex gap-1 items-center"
+				>
 					<Icon name={"mdi:email"} />
 					<small>veriyantoricko302@gmail.com</small>
 				</a>
-				<a href="/" class="flex gap-1 items-center">
+				<a
+					href="https://instagram.com/rickoveriyanto"
+					class="flex gap-1 items-center"
+				>
 					<Icon name={"mdi:instagram"} />
 					<small>rickoveriyanto</small>
 				</a>
-				<a href="/" class="flex gap-1 items-center">
+				<a href="https://github.com/ricko-v" class="flex gap-1 items-center">
 					<Icon name={"mdi:github"} />
 					<small>ricko-v</small>
 				</a>
@@ -99,8 +105,8 @@ const listProjects = await getCollection("projects");
 		<div class="columns-1 md:columns-2 mx-auto space-y-4 mt-5">
 			{
 				listProjects.map((x: any) => (
-					<div class="mb-5">
-						<a href="/" class="relative group rounded">
+					<div class="mb-5 bg-neutral-100 dark:bg-neutral-800 rounded p-3 text-white">
+						<a href={`/p/${x.slug}`} class="relative group rounded">
 							<Image src={x.data.cover} alt={x.data.title} class={"rounded"} />
 							<div
 								style="background: rgba(0,0,0,0.7)"

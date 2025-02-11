@@ -1,30 +1,57 @@
 ---
 title: "Toko HP"
-description: "Sebuah website e-commerce toko hp sederhana"
+description: "Sebuah prototype (CRUD) toko online penjualan handphone dengan Laravel 8 dan Vuejs 2."
 cover: "./cover.png"
-tech_stack: ["Nuxtjs", "Tailwindcss"]
-create_date: "28 Februari 2021"
+tech_stack: ["Laravel", "Vuejs"]
+create_date: "31 Juli 2021"
 ---
+
+## Deskripsi
+Sebuah prototype (CRUD) toko online penjualan handphone dengan Laravel 8 dan Vuejs 2.
+
+Proyek ini dibuat untuk mengimplementasikan hasil belajar laravel versi 8 dengan vuejs sebagai frontend
 
 ## Fitur
 
 - Pencarian produk
-- Filter berdasarkan kategori
-- Keranjang belanja
-- Checkout dengan integrasi pembayaran
+- CRUD Produk
+- CRUD Brand
+- Sistem Admin
 
-## Cara Menggunakan
-
-1. Buka halaman utama.
-2. Cari produk yang diinginkan.
-3. Tambahkan produk ke keranjang belanja.
-4. Lanjutkan ke halaman checkout untuk menyelesaikan pembelian.
-
-## Teknologi yang Digunakan
-
-- **Nuxtjs**: Framework untuk aplikasi Vue.js dengan rendering sisi server.
-- **Tailwindcss**: Framework CSS untuk desain yang responsif dan cepat.
+## Package
+```JSON
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.10.2",
+        "axios": "^0.21",
+        "bootstrap": "^5.1.3",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "resolve-url-loader": "^3.1.2",
+        "sass": "^1.32.11",
+        "sass-loader": "^11.0.1",
+        "vue": "^2.6.12",
+        "vue-loader": "^15.9.8",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "vue-axios": "^3.4.1",
+        "vue-router": "^3.4.2"
+    }
+}
+```
 
 ## Tanggal Pembuatan
 
-28 Februari 2021
+Proyek ini dibuat pada tanggal 31 Juli 2021

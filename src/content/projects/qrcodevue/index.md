@@ -2,27 +2,30 @@
 title: "QR Code Vue"
 description: "Sebuah website untuk generator teks menjadi qr-code"
 cover: "./cover.png"
-tech_stack: ["Nuxtjs", "Tailwindcss"]
+tech_stack: ["Vuejs", "Bootstrap", "qrious"]
 create_date: "28 Februari 2021"
 ---
+
+## Deskripsi
+Sebuah website untuk generator teks menjadi qr-code
+
+## Live
+[https://ricko-v.github.io/qrcode-vue](https://ricko-v.github.io/qrcode-vue)
 
 ## Fitur
 
 - Mengubah teks menjadi QR Code
-- Mendukung berbagai jenis teks
-- Mudah digunakan
-
-## Cara Penggunaan
-
-1. Masukkan teks yang ingin diubah menjadi QR Code.
-2. Klik tombol "Generate".
-3. QR Code akan muncul di layar.
+- Download QR Code
 
 ## Teknologi yang Digunakan
 
-- Nuxtjs
-- Tailwindcss
+- Vue.js
+- Boostrap
+- qrious
+
+## Github
+[https://github.com/ricko-v/qrcode-vue](https://github.com/ricko-v/qrcode-vue)
 
 ## Tanggal Pembuatan
 
-28 Februari 2021
+Proyek ini dibuat pada tanggal 28 Februari 2021

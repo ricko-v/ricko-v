@@ -6,25 +6,50 @@ tech_stack: ["Nuxtjs", "Tailwindcss"]
 create_date: "21 Juli 2022"
 ---
 
+## Deskripsi
+Sebuah website untuk membuat todo list sederhana.
+
+## Live
+[https://todo-nuxt.surge.sh](https://todo-nuxt.surge.sh)
+
 ## Fitur
 
 - Menambahkan, mengedit, dan menghapus todo
 - Menandai todo sebagai selesai
 - Filter todo berdasarkan status (semua, selesai, belum selesai)
 
-## Cara Menggunakan
 
-1. Buka halaman utama Nuxt Todo.
-2. Tambahkan todo baru dengan mengisi form dan menekan tombol "Tambah".
-3. Edit atau hapus todo dengan menekan ikon pensil atau tempat sampah di sebelah todo.
-4. Tandai todo sebagai selesai dengan mencentang kotak di sebelah todo.
-5. Gunakan filter di bagian atas untuk melihat todo berdasarkan status.
+## Package
+```JSON
+{
+  "name": "nuxt-todo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "deploy": "surge --domain todo-nuxt.surge.sh",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
+    "bootstrap": "^4.6.1",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {}
+}
+```
 
-## Teknologi yang Digunakan
-
-- **Nuxtjs**: Framework Vue.js untuk membangun aplikasi universal.
-- **Tailwindcss**: Framework CSS untuk mendesain antarmuka pengguna yang responsif dan modern.
+## Github
+[https://github.com/ricko-v/nuxt-todo](https://github.com/ricko-v/nuxt-todo)
 
 ## Tanggal Pembuatan
 
-21 Juli 2022
+Proyek ini dibuat pada tanggal 21 Juli 2022

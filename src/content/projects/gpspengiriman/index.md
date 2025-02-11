@@ -1,21 +1,19 @@
 ---
 title: "GPS Pengiriman"
-description: "Sebuah website tracking pengiriman dari gps"
+description: "Sebuah website tracking pengiriman dari GPS"
 cover: "./cover.png"
 tech_stack: ["React", "Firebase"]
 create_date: "25 April 2021"
 ---
+
+## Deskripsi
+Sebuah website tracking pengiriman dari perangkat GPS.
+
 ## Fitur Utama
 
-- **Tracking Real-time**: Lacak pengiriman secara real-time dengan akurasi tinggi.
-- **Notifikasi**: Dapatkan notifikasi saat paket Anda mencapai tujuan.
-- **Integrasi Mudah**: Integrasi dengan berbagai layanan pengiriman.
-
-## Cara Menggunakan
-
-1. **Daftar**: Buat akun di website kami.
-2. **Tambahkan Pengiriman**: Masukkan detail pengiriman Anda.
-3. **Lacak**: Pantau pengiriman Anda secara real-time.
+- Lacak pengiriman secara real-time.
+- Pengelolaan pesanan dan pengiriman 
+- Printout surat perintah jalan (SPJ)
 
 ## Teknologi yang Digunakan
 

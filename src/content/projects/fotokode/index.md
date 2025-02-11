@@ -6,20 +6,20 @@ tech_stack: ["Vue.js", "Vue Router", "Materialize", "Prism", "Dom to Image", "js
 create_date: "25 April 2021"
 ---
 
+## Deskripsi
+Sebuah website untuk merubah kode menjadi gambar.
+
+Fotokode adalah proyek yang dibuat untuk menerapkan hasil belajar Vue.js. Terinspirasi dari website populer pembuat screenshot kode [https://carbon.now.sh](https://carbon.now.sh).
+
+## Live
+[https://fotokode.surge.sh/](https://fotokode.surge.sh/)
+
 ## Fitur Utama
 
-- Mengubah kode menjadi gambar dengan berbagai tema.
-- Mendukung berbagai bahasa pemrograman.
-- Mudah digunakan dengan antarmuka yang intuitif.
-- Dapat menyesuaikan warna dan font sesuai keinginan.
+- **Code Highlighter**: Mendukung berbagai bahasa pemrograman.
+- **Tema**: Mendukung berbagai tema dan kustom background.
+- **Download**: Download gambar dari kode yang dimasukan.
 
-## Cara Menggunakan
-
-1. Buka website FotoKode.
-2. Masukkan kode yang ingin diubah menjadi gambar.
-3. Pilih tema dan sesuaikan pengaturan tampilan.
-4. Klik tombol "Generate" untuk membuat gambar.
-5. Unduh gambar yang telah dihasilkan.
 
 ## Teknologi yang Digunakan
 
@@ -30,6 +30,9 @@ create_date: "25 April 2021"
 - **Dom to Image**: Library untuk mengubah elemen DOM menjadi gambar.
 - **jscolor**: Library untuk pemilihan warna.
 
+## Github
+[https://github.com/ricko-v/fotokode](https://github.com/ricko-v/fotokode)
+
 ## Tanggal Pembuatan
 
-25 April 2021
+Proyek ini dibuat pada tanggal 25 April 2021

@@ -4,103 +4,111 @@ create_date: "04 Januari 2025"
 update_date: "04 Januari 2025"
 ---
 
-Welcome to the Markdown Guide! This tutorial will help you learn the basics of Markdown, a lightweight markup language for creating formatted text using a plain-text editor.
+## Panduan Lengkap Markdown
 
-## Table of Contents
-1. [Headings](#headings)
-2. [Paragraphs](#paragraphs)
-3. [Lists](#lists)
-4. [Links](#links)
-5. [Images](#images)
-6. [Code](#code)
-7. [Blockquotes](#blockquotes)
-8. [Tables](#tables)
+Markdown adalah bahasa markup ringan yang digunakan untuk format teks. Markdown sering digunakan untuk menulis dokumentasi, README file, atau posting blog. Berikut adalah panduan lengkap untuk menggunakan Markdown.
 
-## Headings
-Headings are created using the `#` symbol. The number of `#` symbols at the beginning of the line indicates the heading level.
+### Heading
+
+Gunakan tanda pagar `#` untuk membuat heading. Jumlah tanda pagar menentukan tingkat heading.
 
 ```markdown
 # Heading 1
 ## Heading 2
 ### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
 ```
 
-## Paragraphs
-Paragraphs are created by writing text separated by one or more blank lines.
+### Teks
+
+- **Tebal**: Gunakan dua tanda bintang `**` atau dua garis bawah `__`.
+- *Miring*: Gunakan satu tanda bintang `*` atau satu garis bawah `_`.
+- ~~Coret~~: Gunakan dua tanda tilde `~~`.
 
 ```markdown
-This is a paragraph.
-
-This is another paragraph.
+**Teks Tebal**
+*Teks Miring*
+~~Teks Coret~~
 ```
 
-## Lists
-### Unordered Lists
-Unordered lists are created using `-`, `*`, or `+`.
+### Daftar
+
+- **Daftar Tak Berurut**: Gunakan tanda bintang `*`, tanda tambah `+`, atau tanda minus `-`.
+- **Daftar Berurut**: Gunakan angka diikuti dengan titik `1.`.
 
 ```markdown
-- Item 1
-- Item 2
-  - Subitem 1
-  - Subitem 2
+* Item 1
+* Item 2
+  * Subitem 2.1
+  * Subitem 2.2
+
+1. Item 1
+2. Item 2
+   1. Subitem 2.1
+   2. Subitem 2.2
 ```
 
-### Ordered Lists
-Ordered lists are created using numbers followed by a period.
+### Tautan
+
+Gunakan tanda kurung siku `[]` untuk teks tautan dan tanda kurung biasa `()` untuk URL.
 
 ```markdown
-1. First item
-2. Second item
-   1. Subitem 1
-   2. Subitem 2
+[Contoh Tautan](https://www.example.com)
 ```
 
-## Links
-Links are created using square brackets `[]` for the text and parentheses `()` for the URL.
+### Gambar
+
+Gunakan tanda seru `!` diikuti dengan sintaks tautan.
 
 ```markdown
-[GitHub](https://github.com)
+![Alt Teks](https://www.example.com/gambar.jpg)
 ```
 
-## Images
-Images are similar to links but start with an exclamation mark `!`.
+### Kode
+
+- **Kode dalam Baris**: Gunakan tanda backtick `` ` ``.
+- **Blok Kode**: Gunakan tiga tanda backtick `` ``` `` atau indentasi empat spasi.
 
 ```markdown
-![Alt text](https://example.com/image.jpg)
+`Kode dalam baris`
+
+```
+Blok kode
+```
+    Kode dengan indentasi
 ```
 
-## Code
-### Inline Code
-Inline code is created using backticks `` ` ``.
+### Kutipan
+
+Gunakan tanda `>` untuk membuat kutipan.
 
 ```markdown
-Here is some `inline code`.
+> Ini adalah kutipan.
 ```
 
-### Code Blocks
-Code blocks are created using triple backticks ``` ``` ``` or indentation.
+### Tabel
 
-<pre>
-```
-This is a code block.
-```
-</pre>
-
-## Blockquotes
-Blockquotes are created using the `>` symbol.
-
-```markdown
-> This is a blockquote.
-```
-
-## Tables
-Tables are created using pipes `|` and hyphens `-`.
+Gunakan tanda pipa `|` untuk membuat tabel.
 
 ```markdown
 | Header 1 | Header 2 |
 |----------|----------|
-| Row 1    | Data 1   |
-| Row 2    | Data 2   |
+| Baris 1  | Data 1   |
+| Baris 2  | Data 2   |
 ```
 
-That's it! You now know the basics of Markdown. Happy writing!
+### Garis Horizontal
+
+Gunakan tiga atau lebih tanda minus `---`, tanda bintang `***`, atau tanda garis bawah `___`.
+
+```markdown
+---
+***
+___
+```
+
+Dengan panduan ini, Anda dapat mulai menulis dokumen menggunakan Markdown dengan mudah. Selamat mencoba!
+
+*Penulisan dokumentasi GPT 4o*

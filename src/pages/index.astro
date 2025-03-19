@@ -55,14 +55,16 @@ const listProjects = await getCollection("projects");
 		<p>
 			Hai 👋
 			<br />
-			Saya Ricko Veriyanto, berusia 21 tahun dan tinggal di Colomadu, Karanganyar.
-			Saya memiliki minat besar dalam dunia teknologi dan telah bekerja selama lebih
-			dari dua tahun sebagai Frontend Developer di PT Tribintang Emas Mulia.
+			Perkenalkan, saya Ricko Veriyanto, seorang Frontend Developer berusia 21 tahun
+			yang berdomisili di Colomadu, Karanganyar. Saya memiliki ketertarikan yang
+			kuat di bidang teknologi dan telah berpengalaman selama lebih dari dua tahun
+			sebagai Frontend Developer di PT Tribintang Emas Mulia.
 			<br /><br />
-			Meskipun saat ini fokus saya adalah pengembangan frontend, saya tetap senang
-			mengeksplorasi berbagai hal di bidang teknologi. Dari ketertarikan tersebut,
-			saya terinspirasi untuk membuat sebuah website yang mendokumentasikan hasil
-			belajar dan proyek-proyek saya.
+			Meskipun saat ini fokus utama saya adalah pada pengembangan antarmuka pengguna
+			(frontend development), saya juga aktif mengeksplorasi berbagai aspek lain
+			di dunia teknologi. Berangkat dari minat tersebut, saya membangun sebuah website
+			pribadi yang berfungsi sebagai dokumentasi pembelajaran dan portofolio proyek-proyek
+			yang telah saya kerjakan.
 		</p>
 	</div>
 
@@ -80,7 +82,7 @@ const listProjects = await getCollection("projects");
 					<div class="mb-5 bg-neutral-100 dark:bg-neutral-800 rounded p-3">
 						<a
 							href={`/d/${x.slug}`}
-							class="flex items-center justify-between flex-wrap  text-neutral-700  dark:text-neutral-400"
+							class="inline md:flex items-center justify-between flex-wrap  text-neutral-700  dark:text-neutral-400"
 						>
 							<h1 class="font-semibold text-neutral-700  dark:text-neutral-400 flex flex-wrap gap-x-2 items-center">
 								<Icon
@@ -105,7 +107,7 @@ const listProjects = await getCollection("projects");
 		<div class="columns-1 md:columns-3 mx-auto space-y-4 mt-5">
 			{
 				listProjects.reverse().map((x: any) => (
-					<div class="mb-5 bg-neutral-100 dark:bg-neutral-800 rounded text-white">
+					<div class="mb-5 bg-neutral-100 dark:bg-neutral-800 rounded text-white border border-neutral-100 dark:border-neutral-800">
 						<a href={`/p/${x.slug}`} class="relative group rounded">
 							<Image src={x.data.cover} alt={x.data.title} class={"rounded"} />
 							<div
